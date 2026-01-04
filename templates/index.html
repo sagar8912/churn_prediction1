@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            background-image: url("/static/customer-churn-shown-using-text-600nw-2443621059.webp");
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        .card {
+            width: 460px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, #007bff, #00c6ff);
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #0056b3, #0096c7);
+        }
+
+        .note {
+            font-size: 12px;
+            color: gray;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Customer Churn Prediction</h2>
+
+    <form action="/predict" method="post">
+
+        <label>Credit Score</label>
+        <input type="number" name="CreditScore" min="300" max="900" required>
+
+        <label>Geography</label>
+        <select name="Geography">
+            <option>France</option>
+            <option>Germany</option>
+            <option>Spain</option>
+        </select>
+
+        <label>Gender</label>
+        <select name="Gender">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <label>Age</label>
+        <input type="number" name="Age" min="18" max="100" required>
+
+        <label>Tenure (Years)</label>
+        <input type="number" name="Tenure" min="0" max="10" required>
+
+        <label>Balance</label>
+        <input type="number" name="Balance" min="0" max="250000" step="0.01" required>
+
+        <label>Number of Products</label>
+        <input type="number" name="NumOfProducts" min="1" max="4" required>
+
+        <label>Has Credit Card</label>
+        <select name="HasCrCard">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>Active Member</label>
+        <select name="IsActiveMember">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>Estimated Salary</label>
+        <input type="number" name="EstimatedSalary" min="0" max="200000" step="0.01" required>
+
+        <button type="submit">Predict Churn</button>
+    </form>
+
+    <div class="note">
+        Machine Learning Powered Prediction
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+

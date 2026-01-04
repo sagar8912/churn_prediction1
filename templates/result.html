@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: Arial;
+        }
+        .box {
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background: white;
+            text-align: center;
+            border-radius: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>{{ prediction }}</h2>
+    <p>Churn Probability: <b>{{ probability }}%</b></p>
+    <br>
+    <a href="/">🔙 Predict Again</a>
+</div>
+
+</body>
+</html>
+
